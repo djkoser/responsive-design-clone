@@ -1,11 +1,66 @@
 /* Welcome to our studio font */
-h2 {
+* {
+  background-color: transparent;
+}
+h2, h5 {
   font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-/* Font Family for buttons and large header*/
-h1 {
+h1, h3, h4, button {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  text-align: center;
+}
+
+.italic {
+  font-style:italic;
+}
+.center {
+  text-align:center;
+}
+.right {
+  text-align:right; 
+}
+.left {
+  text-align:left;
+}
+.start{
+  justify-content: flex-start;
+}
+.end {
+  justify-content: flex-end;
+}
+
+h1 {
+  font-size: 40pt;
+  color:white;
+  margin: 0px;
+}
+
+h2 {
+  font-size: 20pt;
+  color:white;
+  font-weight: 400;
+  margin: 0px;
+}
+
+h3 {
+  font-size: 30pt;
+  margin-bottom:20px;
+}
+
+h4 {
+  font-size: 18pt;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+h5 {
+  color:#6C757D;
+  font-size: 13pt;
+  line-height: 30px;
+  font-weight: 200;
+  margin-bottom: 50px;
+  margin-top: 0px;
 }
 
  .linkedin, .twitter, .facebook, .plusHover{
@@ -14,21 +69,60 @@ h1 {
   width: auto;
 }
 
+button {
+  width: 175px;
+  height: 50px;
+  background-color: #FED136;
+  color:white;
+  border-radius: 2%;
+  border:none;
+  font-size:11pt;
+  margin-top: 30px
+}
+
 header {
   background-image: url('./media/header-bg.jpg');
-  background-position: 1% 55%;
-  object-fit: cover;
+  background-position: 1% 50%;
   width:100vw;
   height: 750px;
+  padding: 10px;
+  object-fit: cover;
 }
 
 .navLinksBox {
   display:flex;
- width: 100vw;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100px;
+  color:white;
+  margin:0px;
 }
 #navBarLogo {
   width: 200px;
   height: auto;
+}
+#logoLink {
+  width: 600px;
+}
+nav{
+  display:flex;
+  justify-content: end;
+}
+.navLinks {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 14pt;
+}
+
+.niceMeet {
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-around;
+  height: 275px;
+  margin-top: 130px;
 }
 
 .socialBox {
@@ -41,16 +135,6 @@ header {
   background-color: #23272B;
 }
 
-.aboutPics {
-  border-radius: 50%;
-  width: 150px;
-}
-
-.portPics {
-  width: 350px;
-  height: auto; 
-}
-
 .contact {
   background-color: #212529;
   background-image: url("./media/map-image.png");
@@ -59,24 +143,97 @@ header {
   height: auto;
 }
 
-.portfolio .amzTeam {
-  background-color: #F8F9FA;
+#portfolio, #amzTeam {
+  background-color:#F8F9FA;
 }
 
-.services{
+#services,#portfolio,#about,#amzTeam {
+  display: flex;
+  justify-items: center; 
+  align-items: center;
+  flex-direction: column; 
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+#services {
+  text-align:center;
+}
+.serviceSVG{
   display:flex;
   align-items: center;
   justify-content: center;
-  margin:50px;
   background-color:#FED136;
   border-radius: 50%;
   width: 125px;
   height: 125px;
+}
+.serviceBox {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 370px;
+  text-align:center;
+  padding: 0px;
+}
+.servicesContainer {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
 }
 #eComm,#respDesign,#webSec {
   fill:white;
   height: 75px;
   width: auto;
   object-fit:cover;
+  margin: 0px;
+}
+.prtPicsContainer{
+  display: flex;
+  flex-wrap:wrap;
+  width: 1200px;
+}
+.portPics {
+  width: 350px;
+  height: auto; 
+  background-color: white;
+  margin: 10px;
+  object-fit:cover;
+  text-align: center;
+}
+.timeline {
+  width:900px;
+}
+.aboutContainer {
+  display:flex;
+}
+.aboutBox {
+  height: auto;
+  width: 350px;
+  display:inline-flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.line{
+  height:50px;
+  width:2px;
+  background-color: #E9ECEF ;
+}
+.aboutPicsBox{
+  width: 550px;
+  display:inline-flex;
+  flex-direction:column; 
+  justify-content: center;
+}
+.aboutPics {
+  margin-left:25px;
+  margin-right: 25px;
+  border-radius: 50%;
+  width: 150px;
+  height:auto;
+  border: solid #E9ECEF 7px; 
+}
 
+#amzTeam{
+  text-align:center; 
 }
