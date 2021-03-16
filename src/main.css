@@ -16,9 +16,19 @@ h1 {
 
 header {
   background-image: url('./media/header-bg.jpg');
+  background-position: 1% 55%;
   object-fit: cover;
   width:100vw;
-  height: 700px;
+  height: 750px;
+}
+
+.navLinksBox {
+  display:flex;
+ width: 100vw;
+}
+#navBarLogo {
+  width: 200px;
+  height: auto;
 }
 
 .socialBox {
