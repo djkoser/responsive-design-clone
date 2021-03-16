@@ -62,12 +62,6 @@ h5 {
   margin-top: 0px;
 }
 
- .linkedin, .twitter, .facebook, .plusHover{
-  fill:white; 
-  height: 15px;
-  width: auto;
-}
-
 button {
   width: 175px;
   height: 50px;
@@ -122,16 +116,6 @@ nav{
   justify-content:space-around;
   height: 275px;
   margin-top: 130px;
-}
-
-.socialBox {
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px; 
-  border-radius: 50%;
-  background-color: #23272B;
 }
 
 .contact {
@@ -190,7 +174,7 @@ nav{
 .prtPicsContainer{
   display: flex;
   flex-wrap:wrap;
-  width: 1200px;
+  width: 1110px;
 }
 .portPics {
   width: 350px;
@@ -200,6 +184,13 @@ nav{
   object-fit:cover;
   text-align: center;
 }
+
+.plusHover{
+  fill:white; 
+  height: 15px;
+  width: auto;
+}
+
 .timeline {
   width:900px;
 }
@@ -254,3 +245,76 @@ nav{
 #amzTeam{
   text-align:center; 
 }
+
+.teamBox{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teamMemberBox{
+  display:flex;
+  flex-direction: column; 
+  justify-content:center;
+  align-items:center;
+  padding:75px;
+}
+
+
+.socialBox {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px; 
+  border-radius: 50%;
+  background-color: #23272B;
+}
+
+.linkedin, .twitter, .facebook{
+  fill:white; 
+  height: 15px;
+  width: auto;
+}
+
+.socialContainer {
+  width:150px;
+  display:flex;
+  justify-content:space-between; 
+}
+.teamPic {
+  width: 200px;
+  border-radius: 50%;
+  border:solid #DFE0E1 10px;
+} 
+
+.name {
+  margin-top:20px;
+  margin-bottom:0px;
+}
+
+.title {
+margin-top: 0px;
+margin-bottom: 20px;
+}
+
+.teamDesc{
+  width:800px;
+  margin-bottom:0px;
+}
+
+.logos {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding:50px;
+}
+
+.logoPics {
+  margin-left:40px;
+  margin-right:40px;
+}
+
+
+
+
