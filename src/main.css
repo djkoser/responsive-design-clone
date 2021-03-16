@@ -8,10 +8,17 @@ h1 {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.eComm, .linkedin, .twitter, .facebook, .plusHover, .respDesign, .webSec {
+ .linkedin, .twitter, .facebook, .plusHover{
   fill:white; 
   height: 15px;
   width: auto;
+}
+
+header {
+  background-image: url('./media/header-bg.jpg');
+  object-fit: cover;
+  width:100vw;
+  height: 700px;
 }
 
 .socialBox {
@@ -32,4 +39,34 @@ h1 {
 .portPics {
   width: 350px;
   height: auto; 
+}
+
+.contact {
+  background-color: #212529;
+  background-image: url("./media/map-image.png");
+  width:100vw;
+  object-fit:cover;
+  height: auto;
+}
+
+.portfolio .amzTeam {
+  background-color: #F8F9FA;
+}
+
+.services{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin:50px;
+  background-color:#FED136;
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+}
+#eComm,#respDesign,#webSec {
+  fill:white;
+  height: 75px;
+  width: auto;
+  object-fit:cover;
+
 }
