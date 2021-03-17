@@ -86,23 +86,49 @@ header {
   background-image: url('./background_images/header-bg.jpg');
   background-position: 1% 50%;
   height: 750px;
-  padding: 10px;
   object-fit: cover;
+  padding: 0.1px;
 }
+
 .navLinksBox {
   position: fixed;
   width: 100%;
+  top: 0px;
   display:flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
+  height: fit-content;
   color:white;
   margin:0px;
+  min-width: 100%
 }
-#navBarLogo {
-  width: 200px;
-  height: auto;
+
+.navBarStart {
+  transition: 0.5s; 
+  transform: translate(0%, 0%);
 }
+.navBarFinish {
+  transition: 0.5s;
+  background-color:#212429;
+  transform: translate(0%, -30%);
+}
+
+.logoStart {
+  transform:scale(1,1) translate(0%, 0%) ;
+  transition: 0.5s;
+}
+
+.logoFinish{
+  transform:scale(0.8,0.8) translate(0%,50%);
+  background-color:#212429;
+  transition: 0.5s;
+}
+
+#navBarLogo{
+  margin:20px;
+  height:35px;
+}
+
 #logoLink {
   width: 600px;
 }
@@ -115,6 +141,15 @@ nav{
   margin-right: 20px;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 12pt;
+}
+
+.navLinksStart {
+  transition: 0.5s;
+  transform: translate(0%,0%);
+}
+.navLinksFinish {
+  transition: 0.5s;
+  transform: translate(0%,40%);
 }
 
 .niceMeet {
