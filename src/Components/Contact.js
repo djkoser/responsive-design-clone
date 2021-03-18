@@ -23,7 +23,7 @@ export default function Contact() {
       <footer>
         <div className="footerContainer">
           <div className='copyright'>Recreated by David Koser 2021</div>
-          <div className='socialContainer2'>
+          <div className='socialContainer'>
             <div className='socialBox'>
               <svg className="twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path
