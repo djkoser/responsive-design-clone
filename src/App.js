@@ -1,4 +1,5 @@
 import React from 'react';
+import'./reset.css';
 import './App.css';
 import About from './Components/About';
 import Contact from './Components/Contact';

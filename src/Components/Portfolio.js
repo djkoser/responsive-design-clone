@@ -4,7 +4,7 @@ export default function Portfolio() {
 
 
   return (
-    <section>
+    <section id='portfolioWrapper'>
       <div id='portfolio'>
         <h3>PORTFOLIO</h3>
         <h5 className='italic'>Lorem ipsum dolor sit amet consectetur</h5>

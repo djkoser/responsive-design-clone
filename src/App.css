@@ -1,8 +1,7 @@
 /* Welcome to our studio font */
 * {
-  background-color: transparent;
-  margin:0px;
-  max-width:100%;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 /* Remove Garish Default Link Stylings */
 a, a:link, a:visited, a:active, a:hover {
@@ -14,9 +13,58 @@ h2, h5 {
   font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-h1, h3, h4, .button, input, textarea, .bottomLinks, .copyright {
+h1, h3, h4, .button, input, textarea, .bottomLinks, .copyright, .menuNavs {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-align: center;
+}
+
+
+@media (min-width:1400px) {
+  #logoLink{
+    margin-right: 400px;
+  }
+  .serviceBox {
+    width:400px;
+  }
+  .serviceBox {
+    width:300px;
+  }
+  .hamburger {
+    display:none;
+  }
+}
+
+@media(max-width:1400px) and (min-width:900px) {
+  .serviceBox {
+    width:300px;
+  }
+  .navLinksBox {
+    background-color:#212429;
+    }
+  .hamburger {
+    display:none;
+  }
+}
+
+@media(max-width:900px) and (min-width:0px) {
+  .serviceBox{
+    width:250px;
+  }
+  .navLinks{
+    display:none;
+  }
+  .navLinksBox {
+  background-color:#212429;
+  }
+  #welcomeHeader{
+    font-size: 16pt;
+  }
+  #bigHeader {
+    font-size:40pt;
+  }
+  .hamburger {
+    margin-right:10px;
+  }
 }
 
 .italic {
@@ -38,14 +86,12 @@ h1, h3, h4, .button, input, textarea, .bottomLinks, .copyright {
 h1 {
   font-size: 50pt;
   color:white;
-  margin: 0px;
 }
 
 h2 {
   font-size: 20pt;
   color:white;
   font-weight: 400;
-  margin: 0px;
 }
 
 h3 {
@@ -56,7 +102,6 @@ h3 {
 h4 {
   font-size: 18pt;
   margin-bottom: 20px;
-  margin-top: 0px;
 }
 
 h5 {
@@ -65,7 +110,6 @@ h5 {
   line-height: 30px;
   font-weight: 200;
   margin-bottom: 50px;
-  margin-top: 0px;
 }
 
 .button {
@@ -79,32 +123,94 @@ h5 {
   border-radius: 2%;
   border:none;
   font-size:11pt;
-  margin-top: 30px
+  margin-top: 30px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #fcf0c5;
 }
 
 header {
   background-image: url('./background_images/header-bg.jpg');
   background-position: 1% 50%;
   height: 750px;
-  object-fit: cover;
-  padding: 0.1px;
+  padding:1px;
+}
+
+.hamburger {
+  background-color: #fcc500;
+  width:100px;
+  height:40px;
+  border-radius: 7px;
+  margin-left:30vw;
+  z-index:4;
+  transition: 0.5s;
+}
+
+.hamDiv {
+  position: relative;
+  left: 70px;
+  bottom: 22px;
+  background-color: white;
+  height:3px;
+  width:17px;
+  margin: 2px;
+}
+
+#menTxt {
+  position: relative;
+  font-size: 11pt;
+  right:14px;
+  top:12px;
 }
 
 .navLinksBox {
   position: fixed;
-  width: 100%;
   top: 0px;
   display:flex;
   align-items: center;
   justify-content: center;
   height: fit-content;
   color:white;
-  margin:0px;
-  min-width: 100%
+  width: 100%;
+  z-index:3;
+}
+
+.menuContent {
+  width: 100%;
+  display:flex;
+  flex-direction: column; 
+  justify-content: space-evenly;
+  align-items:flex-start;
+  position:fixed;
+  top: 75px;
+  height: 300px;
+  background-color:#212529;
+  z-index: 2;
+  padding-left: 30px;
+  color:white; 
+  transition: 1s;
+  transform: translate(0px, -400px);
+}
+
+.visibleMenu {
+  transition: 1s; 
+  transform: translate(0px, 0px);
+}
+
+.menuMoveWithHeader {
+  transition: 0.5s;
+  transform: translate(0px,-30px);
+}
+
+.buttonMoveWithHeader {
+  transition: 0.5s; 
+  transform: translate(0px,10px);
 }
 
 .navBarStart {
-  transition: 0.5s; 
+  transition: 0.3s; 
   transform: translate(0%, 0%);
 }
 .navBarFinish {
@@ -114,8 +220,8 @@ header {
 }
 
 .logoStart {
-  transform:scale(1,1) translate(0%, 0%) ;
-  transition: 0.5s;
+  transform:scale(1,1) translate(0%, 0%);
+  transition: 0.3s;
 }
 
 .logoFinish{
@@ -129,9 +235,6 @@ header {
   height:35px;
 }
 
-#logoLink {
-  width: 600px;
-}
 nav{
   display:flex;
   justify-content: end;
@@ -144,12 +247,12 @@ nav{
 }
 
 .navLinksStart {
-  transition: 0.5s;
+  transition: 0.3s;
   transform: translate(0%,0%);
 }
 .navLinksFinish {
   transition: 0.5s;
-  transform: translate(0%,40%);
+  transform: translate(0%,50%);
 }
 
 .niceMeet {
@@ -184,45 +287,69 @@ nav{
   border-radius: 50%;
   width: 125px;
   height: 125px;
+  margin-bottom: 20px;
 }
 .serviceBox {
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 370px;
   text-align:center;
-  padding: 0px;
 }
 .servicesContainer {
   display: flex;
+  flex-wrap:wrap;
   align-items: center; 
   justify-content: center;
 }
+
 #eComm,#respDesign,#webSec {
   fill:white;
   height: 75px;
   object-fit:cover;
-  margin: 0px;
 }
 .prtPicsContainer{
   display: flex;
   flex-wrap:wrap;
+  justify-content: center;
   width: 1110px;
 }
 .portPics {
+  position:relative;
+  right:10px;
+  bottom:5px;
   width: 350px;
-  height: auto; 
+  max-height: 400px;
   background-color: white;
-  margin: 10px;
   object-fit:cover;
   text-align: center;
+  margin:10px;
+}
+
+.plusback {
+  position:relative;
+  right: 10px;
+  bottom:406px;
+  margin:10px;
+  width:350px;
+  height:265px;
+  background-color: #FED136;
+  transition:0.3s; 
+  opacity:0%;
+}
+
+.plusback:hover {
+  transition: 0.3s;
+  opacity: 80%;
 }
 
 .plusHover{
+  position:relative;
+  top:100px;
   fill:white; 
-  height: 15px;
+  height: 50px;
   width: auto;
+  background-color: #FED136;
 }
 
 .timeline {
@@ -282,8 +409,8 @@ nav{
 
 .teamBox{
   display:flex;
+  flex-wrap:wrap;
   justify-content: center;
-  align-items: center;
 }
 
 .teamMemberBox{
@@ -324,11 +451,9 @@ nav{
 
 .name {
   margin-top:20px;
-  margin-bottom:0px;
 }
 
 .title {
-margin-top: 0px;
 margin-bottom: 20px;
 }
 
@@ -339,14 +464,15 @@ margin-bottom: 20px;
 
 .logos {
   display:flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content:center;
   padding:50px;
 }
 
 .logoPics {
   margin-left:40px;
   margin-right:40px;
+  
 }
 
 .contact {
@@ -360,17 +486,21 @@ margin-bottom: 20px;
   background-position:center;
   padding:50px;
 }
+
 form {
   display:flex;
   justify-content:center;
   align-items:center;
 }
+
 .contactTitle {
   color:white;
 }
+
 .contactDescription {
   text-align: center;
 }
+
 .inputs {
   height:250px;
   display:inline-flex;
@@ -378,11 +508,12 @@ form {
   justify-content: space-between;
 
 }
+
 input {
   background-color: white;
   margin-right:10px;
   height: 60px;
-  width: 500px;
+  width: 40vw;
   text-align: left;
   padding-left: 20px;
   border:none;
@@ -393,8 +524,7 @@ textarea{
   display:inline-block;
   background-color: white;
   width: 500px;
-  height:210px;
-  margin:0px;
+  height:250px;
   text-align: left;
   padding:20px;
   border:none;
@@ -418,15 +548,6 @@ footer {
   width: 1100px;
 }
 
-.socialContainer2 {
-  display:flex;
-  justify-content: space-between;
-  align-content:center;
-  width:175px;
-  margin-right: 100px;
-  margin-left: 100px;
-}
-
 .copyright{
   text-align:left;
   width:462.5px;
@@ -443,5 +564,3 @@ footer {
 .bottomLink {
   margin-left:20px;
 }
-
-

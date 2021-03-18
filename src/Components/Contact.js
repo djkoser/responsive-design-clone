@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <div>
+    <div id='contactWrapper'>
       <section id="contact" className='logos'>
         <img className='logoPics' alt="Envato logo" src="./media/envato.jpg" />
         <img className='logoPics' alt="Designmodo logo" src="./media/designmodo.jpg" />
